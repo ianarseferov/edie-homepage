@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 24px;
 }
 
@@ -67,6 +67,34 @@ main {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+}
+
+button {
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 12px;
+}
+
+.blue-btn {
+  color: #f2f2f2;
+  background: #2d9cdb;
+}
+
+.gray-btn {
+  color: #828282;
+  background: #e0e0e0;
 }
 
 header .hamburger-menu {
@@ -166,5 +194,135 @@ header nav.active > div {
 
 header nav.active > div > div {
   opacity: 1;
+}
+
+.home {
+  margin-top: 2rem;
+}
+
+.home .home-img {
+  height: 150px;
+}
+
+.home .home-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.home .grid.grid-header div h1 {
+  margin: 10px 0;
+  width: 280px;
+}
+
+.home .grid.grid-bottom div h1 {
+  width: 200px;
+  margin: 1rem 0;
+}
+
+.home .grid.grid-bottom div p {
+  width: 270px;
+}
+
+.home .grid div {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 9;
+  grid-column: 2/11;
+}
+
+.home .grid div .blue {
+  margin: 0;
+  color: #2d9cdb;
+  font-weight: 500;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.home .grid div h1 {
+  color: #333333;
+  font-weight: 500;
+  line-height: 36px;
+  font-size: 24px;
+}
+
+.home .grid div p {
+  color: #4f4f4f;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.home .grid div form label {
+  color: #828282;
+  font-weight: 500;
+  line-height: 15px;
+  font-size: 10px;
+}
+
+.home .grid div form .input {
+  margin-top: 5px;
+  background: #f2f2f2;
+  padding-right: 10px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+.home .grid div form .input button {
+  margin: 7px 0;
+  padding: 10px 20px;
+}
+
+.home .grid div form .input input {
+  border: none;
+  padding: 10px;
+  background: transparent;
+}
+
+.home .grid div form .input input::-webkit-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.home .grid div form .input input:-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.home .grid div form .input input::-ms-input-placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.home .grid div form .input input::placeholder {
+  color: #bdbdbd;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 14px;
+}
+
+.home .grid div form .input input:focus {
+  outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .home .home-img {
+    height: auto;
+  }
+  .home .home-img img {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .home .grid div {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 3;
+    grid-column: 3/6;
+  }
 }
 /*# sourceMappingURL=main.css.map */
