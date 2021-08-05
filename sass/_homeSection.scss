@@ -1,0 +1,88 @@
+.home {
+  margin-top: 2rem;
+  .home-img {
+    height: 150px;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  .grid {
+    &.grid-header {
+      div {
+        h1 {
+          margin: 10px 0;
+          width: 280px;
+        }
+      }
+    }
+    &.grid-bottom {
+      div {
+        h1 {
+          width: 200px;
+          margin: 1rem 0;
+        }
+        p {
+          width: 270px;
+        }
+      }
+    }
+    div {
+      grid-column: 2/11;
+      .blue {
+        margin: 0;
+        @include text($blue, 500, 18px, 12px);
+      }
+      h1 {
+        @include text($gray-1, 500, 36px, 24px);
+      }
+      p {
+        @include text($gray-2, 400, 18px, 12px);
+      }
+      form {
+        label {
+          @include text($gray-3, 500, 15px, 10px);
+        }
+        .input {
+          margin-top: 5px;
+          background: $gray-6;
+          padding-right: 10px;
+          border-radius: 12px;
+          width: 300px;
+          button {
+            margin: 7px 0;
+            padding: 10px 20px;
+          }
+          input {
+            border: none;
+            padding: 10px;
+            background: transparent;
+            &::placeholder {
+              @include text($gray-4, 500, 21px, 14px);
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    .home-img {
+      height: auto;
+      img {
+        height: auto;
+        object-fit: contain;
+      }
+    }
+    .grid {
+      div {
+        grid-column: 3/6;
+      }
+    }
+  }
+}
