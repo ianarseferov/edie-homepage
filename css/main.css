@@ -42,7 +42,7 @@ main {
   line-height: 35px;
 }
 
-.flex-horizontal {
+.flex-horizontal, .flex-vertical {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,8 +59,14 @@ main {
           justify-content: space-between;
 }
 
-header nav {
-  display: none;
+.flex-vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
 
 header .hamburger-menu {
@@ -97,5 +103,68 @@ header .hamburger-menu.active div:nth-child(2) {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+header nav > div {
+  background: rgba(242, 242, 242, 0.4);
+  border-radius: 50%;
+  width: 250vw;
+  height: 250vw;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+}
+
+header nav > div > div {
+  max-height: 100vh;
+  max-width: 90vw;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+header nav > div > div ul {
+  text-align: center;
+}
+
+header nav > div > div ul li {
+  margin-right: 1.6rem;
+}
+
+header nav > div > div ul li a {
+  color: #333333;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+header nav > div > div ul li:not(:first-child) {
+  padding-top: 1.7rem;
+}
+
+header nav.active {
+  visibility: visible;
+}
+
+header nav.active > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+header nav.active > div > div {
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
