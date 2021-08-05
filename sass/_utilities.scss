@@ -34,6 +34,7 @@ $gray-6: #f2f2f2;
 $blue: #2d9cdb;
 $red: #eb5757;
 $white: #fff;
+$menu-bg: rgba(242, 242, 242,0.4);
 
 main {
   padding: 14px;
@@ -63,4 +64,10 @@ main {
 .flex-horizontal {
   @extend %flex;
   justify-content: space-between;
+}
+
+.flex-vertical{
+  @extend %flex;
+  flex-direction: column;
+  justify-content: center !important;
 }
