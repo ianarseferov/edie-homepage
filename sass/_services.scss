@@ -1,0 +1,65 @@
+.services {
+  margin-top: 1rem;
+  h1 {
+    @include text($gray-1, 500, 36px, 24px);
+    width: 220px;
+    margin: 3rem 0 0;
+  }
+  .element {
+    padding: 2.5rem 2.2rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+    transition: all 0.4s ease-in-out;
+    width: 340px;
+    button {
+      margin-top: 10px;
+      padding: 15px 1.2rem;
+      transition: all 0.4s ease-in-out;
+    }
+    h1 {
+      @include text($gray-1, 700, 36px, 24px);
+      margin: 2rem 0;
+    }
+    &:hover {
+      box-shadow: 0px 10px 30px 0px #3333331a;
+      button {
+        background: $blue;
+        color: $white;
+      }
+    }
+    p {
+      @include text($gray-2, 400, 24px, 16px);
+    }
+    .icon {
+      border-radius: 12px;
+      color: $white;
+      width: 70px;
+      padding: 15px;
+      text-align: center;
+      span {
+        font-size: 2rem;
+      }
+      &.icon-blue {
+        background: $blue;
+      }
+      &.icon-green {
+        background: $green;
+      }
+      &.icon-red {
+        background: $red;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:768px){
+    .services{
+        .flex-vertical{
+            flex-direction: row;
+            justify-content: space-between !important;
+        }
+        .element{
+            width: auto;
+        }
+    }
+}
