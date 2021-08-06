@@ -55,9 +55,7 @@ header {
           li {
             margin-right: 1.6rem;
             a {
-              color: $gray-1;
-              font-weight: 500;
-              font-size: 1.2rem;
+              @include text($gray-1, 500, 36px, 1.2rem);
             }
             &:not(:first-child) {
               padding-top: 1.7rem;
@@ -74,6 +72,48 @@ header {
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    .logo-light{
+      font-size: 36px;
+      cursor: pointer;
+    }
+    nav {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      visibility: visible;
+      & > div {
+        background: transparent;
+        border-radius: 0%;
+        width: auto;
+        height: auto;
+        transform: scale(1);
+        flex: 1;
+        & > div {
+          max-height: auto;
+          max-width: auto;
+          opacity: 1;
+          ul {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            li {
+              &:not(:first-child) {
+                padding-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .hamburger-menu {
+      display: none;
     }
   }
 }
