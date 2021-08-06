@@ -33,6 +33,7 @@ $gray-5: #e0e0e0;
 $gray-6: #f2f2f2;
 $blue: #2d9cdb;
 $red: #eb5757;
+$green:#27AE60;
 $white: #fff;
 $menu-bg: rgba(242, 242, 242, 0.4);
 
@@ -92,6 +93,7 @@ main {
   font-size: 14px;
   line-height: 21px;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 button {
@@ -106,4 +108,8 @@ button {
 .gray-btn {
   color: $gray-3;
   background: $gray-5;
+}
+
+.container{
+  padding: 0 3rem;
 }
