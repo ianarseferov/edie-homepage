@@ -80,8 +80,35 @@
       }
     }
     .grid {
+      &.grid-header {
+        div {
+          h1{
+            margin: 10px 0;
+            width: 500px;
+          }
+          .blue{
+            width: 500px;
+          }
+        }
+      }
+      &.grid-bottom {
+        div {
+          h1,p {
+            width: 300px;
+          }
+        }
+      }
       div {
         grid-column: 3/6;
+        .blue {
+          @include text($blue, 500, 20px, 15px);
+        }
+        h1 {
+          @include text($gray-1, 500, 55px, 38px);
+        }
+        p {
+          @include text($gray-2, 400, 27px, 15px);
+        }
       }
     }
   }
