@@ -381,10 +381,38 @@ header nav.active > div > div {
     -o-object-fit: contain;
        object-fit: contain;
   }
+  .home .grid.grid-header div h1 {
+    margin: 10px 0;
+    width: 500px;
+  }
+  .home .grid.grid-header div .blue {
+    width: 500px;
+  }
+  .home .grid.grid-bottom div h1, .home .grid.grid-bottom div p {
+    width: 300px;
+  }
   .home .grid div {
     -ms-grid-column: 3;
     -ms-grid-column-span: 3;
     grid-column: 3/6;
+  }
+  .home .grid div .blue {
+    color: #2d9cdb;
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  .home .grid div h1 {
+    color: #333333;
+    font-weight: 500;
+    line-height: 55px;
+    font-size: 38px;
+  }
+  .home .grid div p {
+    color: #4f4f4f;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 15px;
   }
 }
 
@@ -466,7 +494,7 @@ header nav.active > div > div {
   background: #eb5757;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 833px) {
   .services .flex-vertical {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -475,9 +503,8 @@ header nav.active > div > div {
     -webkit-box-pack: justify !important;
         -ms-flex-pack: justify !important;
             justify-content: space-between !important;
-  }
-  .services .element {
-    width: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 /*# sourceMappingURL=main.css.map */
