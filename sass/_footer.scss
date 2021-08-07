@@ -1,0 +1,41 @@
+footer {
+  background: $footer-bg;
+  padding: 3rem 3rem 7rem;
+  margin-top: 4rem;
+  &.flex-vertical {
+    align-items: flex-start;
+  }
+  .links {
+    ul {
+      padding: 0;
+    }
+    a {
+      @include text($white, 400, 36px, 18px);
+    }
+  }
+  .social {
+    margin: 3rem 0;
+    img {
+      border-radius: 0;
+      cursor: pointer;
+      &:nth-child(2) {
+        margin: 0 1rem;
+      }
+      &:hover {
+        filter: brightness(120%);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+      .social{
+          margin: 0;
+      }
+    &.flex-vertical {
+      flex-direction: row;
+      justify-content: space-between !important;
+    }
+  }
+}
