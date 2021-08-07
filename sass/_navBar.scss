@@ -1,7 +1,15 @@
 header {
+  z-index: 2222;
+  position: fixed;
+  background: $white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
   .hamburger-menu {
     width: 24px;
     position: relative;
+    z-index: 9999;
     div {
       &:nth-child(2) {
         margin: 4px 0;
@@ -37,6 +45,7 @@ header {
     height: 100%;
     overflow: hidden;
     visibility: hidden;
+    z-index: 999;
     & > div {
       background: $menu-bg;
       border-radius: 50%;
@@ -78,6 +87,7 @@ header {
 
 @media screen and (min-width: 768px) {
   header {
+    padding: 0 1.5rem;
     .logo-light{
       font-size: 36px;
       cursor: pointer;
