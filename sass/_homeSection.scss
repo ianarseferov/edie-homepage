@@ -39,33 +39,6 @@
       p {
         @include text($gray-2, 400, 18px, 12px);
       }
-      form {
-        label {
-          @include text($gray-3, 500, 15px, 10px);
-        }
-        .input {
-          margin-top: 5px;
-          background: $gray-6;
-          padding-right: 10px;
-          border-radius: 12px;
-          width: 300px;
-          button {
-            margin: 7px 0;
-            padding: 10px 20px;
-          }
-          input {
-            border: none;
-            padding: 10px;
-            background: transparent;
-            &::placeholder {
-              @include text($gray-4, 500, 21px, 14px);
-            }
-            &:focus {
-              outline: none;
-            }
-          }
-        }
-      }
     }
   }
 }
