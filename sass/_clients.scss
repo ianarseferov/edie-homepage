@@ -1,0 +1,64 @@
+.clients {
+  margin-top: 3rem;
+  .introduce {
+    width: 300px;
+    align-self: flex-start;
+    p {
+      @include text($red, 500, 27px, 18px);
+    }
+    h1 {
+      @include text($gray-1, 500, 54px, 36px);
+      margin: 0;
+    }
+    h6 {
+      @include text($gray-2, 400, 24px, 16px);
+    }
+  }
+  .team-avatars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    .person-1 {
+      position: relative;
+      top: 0;
+      transform: translateY(50%);
+    }
+    .person-3 {
+      grid-column: 2/3;
+    }
+  }
+  .comment {
+    margin-top: 3rem;
+    h1,
+    h2 {
+      @include text($gray-1, 500, 36px, 24px);
+    }
+    p {
+      @include text($gray-3, 500, 27px, 18px);
+    }
+    .person {
+      justify-content: flex-start;
+      .img-container {
+        width: 120px;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients {
+    margin: 13rem 3rem 0;
+    .comment{
+        width: 600px;
+    }
+    .team-container {
+      .introduce {
+        align-self: center;
+      }
+      flex-direction: row;
+      justify-content: space-between !important;
+    }
+  }
+}
